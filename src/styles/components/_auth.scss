@@ -1,0 +1,68 @@
+@import '../mixins/buttons';
+
+.auth__container {
+  background-color: $primary-blue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth__box {
+  background-color: $secondary-blue;
+  box-shadow: 0 3px $medium-color;
+  color: #fff;
+  width: 90%;
+  max-width: 400px;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.auth__title {
+  margin: 0 0 20px;
+}
+
+.auth__form-control {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 14px;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  color: #fff;
+  font-weight: 500;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.auth__btn {
+  @include std-button;
+  background-color: $medium-color;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background-color: darken($color: $medium-color, $amount: 10);
+  }
+}
+
+.auth__social-networks-title {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.auth__link {
+  color: $medium-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

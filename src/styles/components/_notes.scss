@@ -1,0 +1,82 @@
+@import '../mixins/buttons';
+
+.notes__main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.notes__appbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+
+  button {
+    @include std-button;
+    background-color: transparent;
+    padding: 0;
+    transition: color 0.2s ease;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  button:hover {
+    color: $medium-color;
+  }
+}
+
+.notes__btn-label {
+  margin-left: 5px;
+}
+
+.notes__appbar-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes__picture-btn {
+  margin-right: 20px;
+}
+
+.notes__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 20px;
+  height: 100%;
+}
+
+.notes__title-input,
+.notes__textarea {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.notes__title-input {
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: $medium-color;
+}
+
+.notes__textarea {
+  margin-top: 10px;
+  flex: 1;
+  resize: none;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.notes__image img {
+  max-width: 100%;
+  max-height: 400px;
+  height: 200px;
+  box-shadow: 3px 3px $medium-color;
+}

@@ -1,0 +1,13 @@
+@mixin std-button {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 0;
+  font-weight: 800;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

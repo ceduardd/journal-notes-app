@@ -1,0 +1,141 @@
+.journal__main-content {
+  display: flex;
+  background-color: $primary-blue;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.journal__sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-blue;
+  max-height: 100vh;
+  min-height: 100vh;
+  width: 500px;
+  padding: 20px 25px;
+}
+
+.journal__sidebar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.journal__sidebar-nav-name {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  margin: 0;
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.journal__sidebar-logout-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $medium-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.journal__new-entry {
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  color: #fff;
+
+  p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &:hover {
+    color: $medium-color;
+  }
+}
+
+.journal__entries {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow-y: scroll;
+}
+
+/* Tamaño del scroll */
+.journal__entries::-webkit-scrollbar {
+  display: none;
+}
+
+.journal__entry {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  min-height: 75px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.journal__entry-picture {
+  max-height: 100%;
+  min-width: 60px;
+  max-width: 60px;
+}
+
+.journal__entry-body {
+  padding: 5px 0 5px 10px;
+}
+
+.journal__entry-title {
+  font-size: 14px;
+  margin: 3px 0 5px;
+  font-weight: 800;
+  // color: $medium-color;
+}
+
+.journal__entry-content {
+  font-size: 12px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.journal__entry-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  max-width: 80px;
+  min-width: 80px;
+  // color: $medium-color;
+
+  span {
+    display: block;
+    font-size: 14px;
+  }
+
+  h4 {
+    margin: 0;
+  }
+}
