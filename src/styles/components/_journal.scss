@@ -27,43 +27,39 @@
   align-items: center;
   font-weight: 400;
   margin: 0;
+}
 
-  span {
-    margin-left: 10px;
-  }
+.journal__sidebar-nav-name span {
+  margin-left: 10px;
 }
 
 .journal__sidebar-logout-btn {
   background-color: transparent;
   border: none;
-  cursor: pointer;
   color: #fff;
   transition: color 0.2s ease;
-
-  &:hover {
-    color: $medium-color;
-  }
-
-  &:focus {
-    outline: none;
-  }
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .journal__new-entry {
+  background: transparent;
   text-align: center;
   margin-top: 30px;
-  cursor: pointer;
   transition: transform 0.3s ease-out;
   color: #fff;
+}
 
-  p {
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-  }
+.journal__new-entry p {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px 0;
+  transition: color ease 0.2s;
+}
 
-  &:hover {
-    color: $medium-color;
-  }
+.journal__new-entry:hover,
+.journal__sidebar-logout-btn:hover {
+  color: $medium-color;
 }
 
 .journal__entries {
@@ -91,10 +87,10 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+}
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+.journal__entry:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .journal__entry-picture {
@@ -111,13 +107,13 @@
   font-size: 14px;
   margin: 3px 0 5px;
   font-weight: 800;
-  // color: $medium-color;
 }
 
 .journal__entry-content {
   font-size: 12px;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: darken($color: #fff, $amount: 30);
 }
 
 .journal__entry-date-box {
@@ -128,14 +124,13 @@
   padding: 5px 10px;
   max-width: 80px;
   min-width: 80px;
-  // color: $medium-color;
+}
 
-  span {
-    display: block;
-    font-size: 14px;
-  }
+.journal__entry-date-box span {
+  display: block;
+  font-size: 14px;
+}
 
-  h4 {
-    margin: 0;
-  }
+.journal__entry-date-box h4 {
+  margin: 0;
 }

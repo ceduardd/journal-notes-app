@@ -1,8 +1,11 @@
 @import 'base/settings';
 @import 'base/reset';
 
+// Utils
+@import './utils';
+
 // Components
-@import 'components/google';
+@import 'components/loader';
 @import 'components/auth';
 @import 'components/nothing';
 @import 'components/journal';

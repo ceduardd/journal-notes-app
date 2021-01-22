@@ -14,8 +14,9 @@ const JournalEntry = () => {
 
       <div className="journal__entry-body">
         <p className="journal__entry-title">Un nuevo día</p>
+        {/* 55 chars */}
         <p className="journal__entry-content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing.
+          Lorem ipsum dolor, sit amet consectetur adipisicing ...
         </p>
       </div>
 

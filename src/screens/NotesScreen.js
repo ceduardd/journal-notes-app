@@ -24,6 +24,10 @@ const NotesScreen = () => {
           />
         </div>
       </div>
+
+      <button type="button" className="btn notes__delete-btn">
+        Delete
+      </button>
     </div>
   );
 };
