@@ -12,10 +12,10 @@ const RegisterCard = () => {
   const { errorMessage } = useSelector(state => state.ui);
 
   const [values, changeHandler] = useForm({
-    name: 'David Chávez',
-    email: 'david@example.com',
-    password: '123456',
-    password2: '123456',
+    name: '',
+    email: '',
+    password: '',
+    password2: '',
   });
 
   const { name, email, password, password2 } = values;
@@ -49,7 +49,7 @@ const RegisterCard = () => {
   };
 
   return (
-    <div className="auth__form-container">
+    <div className="auth__form-container animate__animated animate__fadeInUp animate__faster">
       <h1 className="auth__title">Sign Up</h1>
 
       <form autoComplete="off" onSubmit={registerHandler}>
@@ -114,14 +114,12 @@ const RegisterCard = () => {
             showErrorMessage(errorMessage)}
         </div>
 
-        <button className="btn auth__btn-submit" type="submit">
+        <button
+          className="btn auth__btn-submit"
+          style={{ marginBottom: '20px' }}
+          type="submit"
+        >
           Sign Up
-        </button>
-
-        {/* Google Button */}
-        <button className="btn auth__google-btn" type="button">
-          <img src="/google-icon.svg" alt="Logo de Google" />
-          <span>Sign in with Google</span>
         </button>
       </form>
 

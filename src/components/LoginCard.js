@@ -15,8 +15,8 @@ const LoginCard = () => {
   const { loading, errorMessage } = useSelector(state => state.ui);
 
   const [values, changeHandler] = useForm({
-    email: 'david@example.com',
-    password: '123456',
+    email: '',
+    password: '',
   });
 
   const { email, password } = values;
@@ -37,7 +37,7 @@ const LoginCard = () => {
   };
 
   return (
-    <div className="auth__form-container">
+    <div className="auth__form-container animate__animated animate__fadeInUp animate__faster">
       <h1 className="auth__title">Sign In</h1>
 
       <form autoComplete="off" onSubmit={loginHandler}>
